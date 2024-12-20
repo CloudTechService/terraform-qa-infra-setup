@@ -10,4 +10,10 @@ locals {
     Example   = local.name_vpc
     terraform = "true"
   }
+
+  ecr = {
+    stage     = "test"
+    namespace = "qa"
+
+  }
 }

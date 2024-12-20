@@ -7,16 +7,16 @@ module "ec2_optionpulse" {
   ami           = data.aws_ami.optionpulse_api.id
 
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[0]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -31,16 +31,16 @@ module "ec2_halopay_cluster" {
 
   instance_type               = "t3.nano"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[1]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -55,16 +55,16 @@ module "ec2_halopay_api" {
 
   instance_type               = "t3a.small"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[2]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -79,16 +79,16 @@ module "ec2_sylvan_api" {
 
   instance_type               = "t3a.small"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[0]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -103,16 +103,16 @@ module "ec2_message_centre" {
 
   instance_type               = "t3.medium"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[1]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -127,16 +127,16 @@ module "ec2_enrollible_frontend" {
 
   instance_type               = "t3a.medium"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[2]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -151,16 +151,16 @@ module "ec2_ecommerce" {
 
   instance_type               = "t2.large"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[0]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -175,16 +175,16 @@ module "ec2_enrollible_api" {
 
   instance_type               = "m6a.large"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[1]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
@@ -199,15 +199,15 @@ module "ec2_test_jenkins" {
 
   instance_type               = "t3a.medium"
   key_name                    = "qakey"
-  monitoring                  = true
+  monitoring                  = false
   vpc_security_group_ids      = [module.web_server_sg.security_group_id]
   subnet_id                   = module.halo-qa-vpc.public_subnets[2]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 
   tags = {
-    Terraform   = "true"
+    Terraform   = "false"
     Environment = "qa"
     Project     = "halostream"
   }
